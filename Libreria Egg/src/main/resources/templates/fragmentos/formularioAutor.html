@@ -1,0 +1,23 @@
+<div th:fragment="registro">
+    <H1>Registro de Autor</H1>
+    <form action="/registroAutor" method="post">
+        <p th:if="${error != null}" th:text="${error}" style="color: red"> </p>
+        <div class="form-group">
+            <label for="nombre">Nombre del Autor</label>
+            <input type="text" class="form-control" name="nombre" placeholder="Julio Cortazar">
+        </div>
+        <button type="submit" class="btn btn-primary">Cargar Autor</button>
+    </form>
+</div>
+<div th:fragment="edicion">
+    <H1>Edición de Autor</H1>
+    <form action="/edicionAutor" method="post">
+        <p th:if="${error != null}" th:text="${error}" style="color: red"> </p>
+        <div class="form-group">
+            <input type="hidden" class="form-control" name="id" th:value="${id}">
+            <label for="nombre">Nombre del Autor</label>
+            <input type="text" class="form-control" name="nombreAutor" th:value="${nombre}">
+        </div>
+        <button type="submit" class="btn btn-primary">Cargar Autor</button>
+    </form>
+</div>

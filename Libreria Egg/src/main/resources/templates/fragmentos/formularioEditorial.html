@@ -1,0 +1,24 @@
+<div th:fragment="registro">
+    <form action="/registroEditorial" method="post">
+        <H1>Registro de Editorial</H1>
+        <p th:if="${error != null}" th:text="${error}" style="color: red"> </p>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre del Editorial</label>
+            <input type="text" class="form-control" name="nombreEditorial" placeholder="Alfaguara">
+        </div>
+        <button type="submit" class="btn btn-primary">Cargar Editorial</button>
+    </form>
+</div>
+<div th:fragment="edicion">
+    <form action="/edicionEditorial" method="post">
+        <H1>Edición de Editorial</H1>
+        <p th:if="${error != null}" th:text="${error}" style="color: red"> </p>
+        <div class="form-group">
+            <input type="hidden" class="form-control" name="id" th:value="${id}">
+            <label for="exampleFormControlInput1">Nombre del Editorial</label>
+            <input type="text" class="form-control" name="nombreEditorial" th:value="${nombreEditorial}">
+        </div>
+        <button type="submit" class="btn btn-primary">Cargar Editorial</button>
+    </form>
+</div>

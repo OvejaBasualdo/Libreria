@@ -1,0 +1,11 @@
+body#principal{
+    background-image: url('../imagenes/14702235838772.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: inherit;
+}
+
+nav.navbar {
+    background-color: white;
+    color: blue;
+}
